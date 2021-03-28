@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#cover {
+  width: 40vw;
+  height: 40vw;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  perspective: 9vw;
+}
+
+.triangle {
+  border-left: 6.2vw solid transparent;
+  border-right: 6.2vw solid transparent;
+  border-bottom: 11vw solid #fff;
+  width: 0;
+  height: 0;
+  transform: translateY(-39%);
+  z-index: 2;
+  position: relative;
+}
+
+.triangle::after {
+  border-left: 6.2vw solid transparent;
+  border-right: 6.2vw solid transparent;
+  border-bottom: 11vw solid #000;
+  width: 0;
+  height: 0;
+  transform: translateY(-39%);
+  z-index: 2;
+  content: '';
+  position: absolute;
+  left: -6.18vw;
+  top: 0.2vw;
+  transform: scale(0.95);
+}
+
+.beam-left {
+  position: absolute;
+  width: 46%;
+  height: 5px;
+  background: #fff;
+  left: 0;
+  top: 41.5%;
+  transform: rotate(-10deg);
+}
+
+.beam-right {
+  position: absolute;
+  width: 38%;
+  height: 3vw;
+  right: 16%;
+  top: 36.5%;
+  transform: rotateZ(45deg) rotateY(-45deg);
+  display: flex;
+  flex-flow: column;
+}
+
+.beam-right>div {
+  width: 100%;
+  height: 1vw;
+  background: red;
+}
+
+.beam-right>div:nth-of-type(1) {
+  background: #e5210f;
+}
+
+.beam-right>div:nth-of-type(2) {
+  background: #fd3c06;
+}
+
+.beam-right>div:nth-of-type(3) {
+  background: #fdf236;
+}
+
+.beam-right>div:nth-of-type(4) {
+  background: #42b942;
+}
+
+.beam-right>div:nth-of-type(5) {
+  background: #0074b4;
+}
+
+.beam-right>div:nth-of-type(6) {
+  background: #3a1a53;
+}
+
+#shadow1 {
+  width: 5px;
+  height: 11vw;
+  background: red;
+  position: absolute;
+  z-index: 4;
+  transform: translateY(-36%) rotate(29deg);
+  left: 42.5%;
+  background: linear-gradient(to left, transparent, #fff);
+}
+#shadow2 {
+  width: 5px;
+  height: 11vw;
+  background: red;
+  position: absolute;
+  z-index: 4;
+  transform: translateY(-36%) rotate(-29deg);
+  left: 57%;
+  background: linear-gradient(to left, #fff, transparent);
+}
