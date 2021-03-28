@@ -53,7 +53,7 @@ body {
 .beam-left {
   position: absolute;
   width: 46%;
-  height: 5px;
+  height: .1vw;
   background: #fff;
   left: 0;
   top: 41.5%;
